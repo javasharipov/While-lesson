@@ -1,0 +1,153 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #02335e;
+$bg-color: #f8f9fa;
+$text-color: #333;
+
+// Global Styles
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	background-color: $bg-color;
+	color: $text-color;
+}
+
+header {
+	background-color: $primary-color;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.container {
+	display: flex;
+	margin: 20px;
+}
+
+// Sidebar Styles
+.sidebar {
+	width: 200px;
+	padding: 20px;
+	background-color: $secondary-color;
+	color: white;
+
+	h2 {
+		margin: 0 0 10px;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+
+		li {
+			margin: 10px 0;
+
+			a {
+				color: white;
+				text-decoration: none;
+				color: inherit;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+// Content Styles
+.content {
+	flex: 1;
+	padding: 20px;
+
+	section {
+		margin-bottom: 30px;
+
+		h2 {
+			border-bottom: 2px solid $primary-color;
+			padding-bottom: 5px;
+		}
+
+		pre {
+			background-color: #e9ecef;
+			padding: 10px;
+			border-radius: 5px;
+			overflow-x: auto;
+		}
+
+		textarea {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			resize: none;
+		}
+
+		button {
+			background-color: $primary-color;
+			color: white;
+			border: none;
+			padding: 10px 15px;
+			cursor: pointer;
+			border-radius: 5px;
+
+			&:hover {
+				background-color: darken($primary-color, 10%);
+			}
+		}
+
+		#output {
+			background-color: #e9ecef;
+			padding: 10px;
+			border-radius: 5px;
+			margin-top: 10px;
+		}
+	}
+}
+
+// Footer Styles
+footer {
+	text-align: center;
+	padding: 10px 0;
+	background-color: $secondary-color;
+	color: white;
+}
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+	}
+
+	.sidebar {
+		width: 100%;
+		padding: 10px;
+	}
+
+	.content {
+		padding: 10px;
+	}
+
+	header {
+		padding: 15px 0;
+	}
+
+	footer {
+		padding: 10px 0;
+	}
+}
+
+@media (max-width: 480px) {
+	header h1 {
+		font-size: 1.5rem;
+	}
+
+	header p {
+		font-size: 1rem;
+	}
+
+	button {
+		padding: 8px 12px;
+	}
+
+	textarea {
+		height: 150px;
+	}
+}
